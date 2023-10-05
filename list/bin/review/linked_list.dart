@@ -41,3 +41,27 @@ int? middleELement() {
   return slow!.data;
 }
 
+void deleteMiddleElementInSLL() {
+  
+}
+
+void display() {
+  Node? current = head;
+  if(current == null){
+    print('List is empty');
+  }
+  while(current!=null) {
+    print(current.data);
+    current = current.next;
+  }
+}
+
+void main(List<String> args) {
+  addElementAtStart(10);
+  addElementAtStart(20);
+  addElementAtStart(30);
+  addElementAtStart(40);
+  addElementAtStart(50);
+ print(middleELement());
+  
+}
