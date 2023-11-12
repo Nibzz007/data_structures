@@ -42,7 +42,17 @@ int? middleELement() {
 }
 
 void deleteMiddleElementInSLL() {
-  
+  Node? fast = head;
+  Node? slow = head;
+  Node? prev;
+
+  while(fast != null && fast.next != null) {
+    fast = fast.next!.next;
+    prev = slow;
+    slow = slow!.next;
+  }
+  prev!.next = slow!.next;
+  slow = null;
 }
 
 void display() {
@@ -62,6 +72,6 @@ void main(List<String> args) {
   addElementAtStart(30);
   addElementAtStart(40);
   addElementAtStart(50);
- print(middleELement());
-  
+  deleteMiddleElementInSLL();
+  display();
 }
